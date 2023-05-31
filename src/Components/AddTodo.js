@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 // Initialization for ES Users
 import {
   Modal,
@@ -6,15 +6,18 @@ import {
   initTE,
 } from "tw-elements";
 
-initTE({ Modal, Ripple });
-
 
 
 function AddTodo(props){
   const [text,setText]=useState('');
   const [text1,setText1]=useState('');
+  useEffect(() =>{
+    initTE({ Modal, Ripple });
 
+  },[])
+  
  let formHandler=e =>{
+  localStorage.setItem('title',text)
     e.preventDefault();
 props.add(text);
 props.add(text1);

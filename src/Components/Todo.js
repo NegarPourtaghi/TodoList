@@ -6,19 +6,19 @@ import {
   } from "tw-elements";
   
   initTE({ Ripple });
+  
 function Todo(props){
-return(
-<div >
-    
-  
-  <div className=" rounded">
-  {props.text}
-
-  </div>
-  
-</div>
-    
-)
+  return(
+          <div>
+              
+            
+            <div className="bg-primary rounded">
+                  {props.title}
+            </div>
+            
+          </div>
+     
+  )
 }
 
 export default Todo;
