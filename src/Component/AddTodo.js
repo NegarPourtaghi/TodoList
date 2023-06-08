@@ -36,6 +36,7 @@ localStorage.setItem('Todoos',JSON.stringify(Todoos))
 let data=localStorage.getItem('Todoos')
 data=JSON.parse(data)
 console.log(data)
+props.add(data)
 }
 
 let  inputHandler= e => setTitle(e.target.value)

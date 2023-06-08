@@ -5,20 +5,14 @@ import TodoList from "./TodoList";
 
 function App (){
     const [statetodos, setTodosState]=useState({
-        todos:[
-            
-        ]
+        todos:[]
     })
 
 
-  let  addTodo=(Title,Todo ) => {
+  let  addTodo=(data ) => {
      setTodosState(prevState => {
             return {
-                todos : [
-                    ...prevState.todos,
-                    { key : Date.now() , done : false , Title, Todo }
-
-                ]
+                todos : data
 
             }
 
@@ -31,13 +25,13 @@ function App (){
 <AddTodo add={addTodo}/>
 
 <ul
-  class="mb-5 flex list-none flex-row flex-wrap border-b-0 pl-0"
+  className="mb-5 flex list-none flex-row flex-wrap border-b-0 pl-0"
   role="tablist"
   data-te-nav-ref>
   <li role="presentation">
     <a
       href="#tabs-home"
-      class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-1 pt-4 text-sm  font-medium  text-black leading-tight focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-black dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
+      className="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-1 pt-4 text-sm  font-medium  text-black leading-tight focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-black dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
       data-te-toggle="pill"
       data-te-target="#tabs-home"
       data-te-nav-active
@@ -50,7 +44,7 @@ function App (){
   <li role="presentation">
     <a
       href="#tabs-profile"
-      class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-1 pt-4 text-sm  font-medium  text-black leading-tight focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-black dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
+      className="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-1 pt-4 text-sm  font-medium  text-black leading-tight focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-black dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
       data-te-toggle="pill"
       data-te-target="#tabs-profile"
       role="tab"
@@ -61,9 +55,9 @@ function App (){
   </li>
 </ul>
 
-<div class="mb-6">
+<div className="mb-6">
   <div
-    class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+    className="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
     id="tabs-home"
     role="tabpanel"
     aria-labelledby="tabs-home-tab"
@@ -78,7 +72,7 @@ function App (){
 
   </div>
   <div
-    class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+    className="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
     id="tabs-profile"
     role="tabpanel"
     aria-labelledby="tabs-profile-tab">
